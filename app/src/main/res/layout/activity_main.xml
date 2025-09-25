@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/images">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello "
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="World"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_blue_dark" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:text="Android Studio"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="monospace"
+        android:text="Шилов А.А."
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <ImageView
+        android:id="@+id/myImage1"
+        android:layout_width="336dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="152dp"
+        android:src="@drawable/cf798cd991b9a1ea90643bbc66d8ed7c"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imageCaption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="утка"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/myImage1"
+        app:layout_constraintTop_toBottomOf="@id/myImage1" />
+
+    <ImageView
+        android:id="@+id/myImage2"
+        android:layout_width="164dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="320dp"
+        android:src="@drawable/images2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imageCaption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="кот"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/myImage2"
+        app:layout_constraintTop_toBottomOf="@id/myImage2" />
+
+    <ImageView
+        android:id="@+id/myImage3"
+        android:layout_width="82dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="352dp"
+        android:src="@drawable/cat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imageCaption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="кот поменьше"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/myImage3"
+        app:layout_constraintTop_toBottomOf="@id/myImage3"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
