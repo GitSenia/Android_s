@@ -5,10 +5,77 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/images">
+    android:background="@drawable/images"
+    tools:context=".MainActivity">
 
+    <!-- Заголовок Android Studio -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Studio"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
+    <!-- Автор -->
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Шилов А.А."
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Картинка кота (чуть выше центра) -->
+    <ImageView
+        android:id="@+id/ivCat"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cat_fan"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4"/> <!-- 0.5 = центр, 0.4 = чуть выше -->
+
+    <!-- Подпись под котом -->
+    <TextView
+        android:id="@+id/tvCatCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Смешной кот подпись"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/ivCat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Текст поверх кота -->
+    <TextView
+        android:id="@+id/tvOnCatImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Смешной кот"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="#80000000"
+        app:layout_constraintTop_toTopOf="@id/ivCat"
+        app:layout_constraintBottom_toBottomOf="@id/ivCat"
+        app:layout_constraintStart_toStartOf="@id/ivCat"
+        app:layout_constraintEnd_toEndOf="@id/ivCat"/>
+
+    <!-- Hello World внизу справа -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,105 +89,47 @@
             android:layout_height="wrap_content"
             android:text="Hello "
             android:textSize="24sp"
-            android:textColor="@android:color/holo_red_dark" />
+            android:textColor="@android:color/holo_red_dark"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="World"
             android:textSize="24sp"
-            android:textColor="@android:color/holo_blue_dark" />
+            android:textColor="@android:color/holo_blue_dark"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
+    <!-- Пирамида картинок -->
+    <FrameLayout
+        android:id="@+id/imageStack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="216dp"
-        android:text="Android Studio"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="24sp"
-
-        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="68dp" />
+        android:layout_margin="16dp">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:fontFamily="monospace"
-        android:text="Шилов А.А."
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="62dp" />
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/cf798cd991b9a1ea90643bbc66d8ed7c"
+            android:contentDescription="@null"/>
 
-    <ImageView
-        android:id="@+id/myImage1"
-        android:layout_width="336dp"
-        android:layout_height="320dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="152dp"
-        android:src="@drawable/cf798cd991b9a1ea90643bbc66d8ed7c"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cat"
+            android:contentDescription="@null"/>
 
-    <TextView
-        android:id="@+id/imageCaption1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="утка"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/myImage1"
-        app:layout_constraintTop_toBottomOf="@id/myImage1" />
-
-    <ImageView
-        android:id="@+id/myImage2"
-        android:layout_width="164dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="320dp"
-        android:src="@drawable/images2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/imageCaption2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="кот"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/myImage2"
-        app:layout_constraintTop_toBottomOf="@id/myImage2" />
-
-    <ImageView
-        android:id="@+id/myImage3"
-        android:layout_width="82dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="352dp"
-        android:src="@drawable/cat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/imageCaption3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="кот поменьше"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/myImage3"
-        app:layout_constraintTop_toBottomOf="@id/myImage3"/>
-
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/images2"
+            android:contentDescription="@null"/>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
